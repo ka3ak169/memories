@@ -1,0 +1,10 @@
+.header__unit {
+  text-decoration: none;
+  cursor: pointer;
+  color: #828282;
+  transition: color .3s linear;
+}
+
+.header__unit:hover {
+  color: #000;
+}
