@@ -1,0 +1,8 @@
+.skills__programs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  margin: 84px 0 0;
+}

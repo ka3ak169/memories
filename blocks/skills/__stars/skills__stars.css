@@ -1,0 +1,7 @@
+.skills__stars {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-end;
+  justify-content: space-between;
+  margin-top: 41px;
+}

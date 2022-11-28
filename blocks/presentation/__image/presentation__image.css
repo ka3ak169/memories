@@ -1,0 +1,5 @@
+.presentation__image {
+  grid-column: span 3;
+  margin: 0;
+  object-fit: cover;
+}

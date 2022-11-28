@@ -1,0 +1,5 @@
+.skills {
+  display: flex;
+  flex-direction: column;
+  padding: 91px 0 111px;
+}

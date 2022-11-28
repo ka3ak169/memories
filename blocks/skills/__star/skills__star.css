@@ -1,0 +1,7 @@
+.skills__star {
+  background-image: url(../../../images/Star.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-width: 26px;
+  height: 26px;
+}

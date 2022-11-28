@@ -1,5 +1,6 @@
 @import url(../vendor/normalize.css);
 @import url(../blocks/page/page.css);
+@import url(../blocks/main/main.css);
 /* main memu */
 @import url(../blocks/header/header.css);
 @import url(../blocks/header/__main-menu/header__main-menu.css);
@@ -12,3 +13,21 @@
 @import url(../blocks/presentation/__lang-link/presentation__lang-link.css);
 @import url(../blocks/presentation/__lang/presentation__lang.css);
 @import url(../blocks/presentation/__name/presentation__name.css);
+@import url(../blocks/presentation/__separator/presentation__separator.css);
+@import url(../blocks/presentation/__lang-link/_active/presentation__lang-link_active.css);
+/* about */
+@import url(../blocks/about/about.css);
+@import url(../blocks/about/__paragraph/about__paragraph.css);
+@import url(../blocks/about/__paragraphs/about__paragraphs.css);
+@import url(../blocks/about/__headline/about__headline.css);
+/* skills */
+@import url(../blocks/skills/skills.css);
+@import url(../blocks/skills/__headline/skills__headline.css);
+@import url(../blocks/skills/__photo/skills__photo.css);
+@import url(../blocks/skills/__program-name/skills__program-name.css);
+@import url(../blocks/skills/__program/skills__program.css);
+@import url(../blocks/skills/__programs/skills__programs.css);
+@import url(../blocks/skills/__secondline/skills__secondline.css);
+@import url(../blocks/skills/__star/skills__star.css);
+@import url(../blocks/skills/__stars/skills__stars.css);
+@import url(../blocks/skills/__star/_active/skills__star_actvie.css);

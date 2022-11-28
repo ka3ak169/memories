@@ -1,0 +1,14 @@
+.skills__program {
+  width: 100%;
+  max-width: 167px;
+  min-height: 207px;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+  color: #828282;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+}

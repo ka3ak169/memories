@@ -1,36 +1,108 @@
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Заголовок страницы</title>
-    <link rel="stylesheet" href="./pages/index.css">
-  </head>  
-  <body class="page">
-    <header class="header">
-      <nav class="header__main-menu">
-        <ul class="header__menu">
-          <li><a class="header__unit" href="#">Home</a></li>
-          <li><a class="header__unit" href="#">About me</a></li>
-          <li><a class="header__unit" href="#">Skills</a></li>
-          <li><a class="header__unit" href="#">Portfolio</a></li>
-          <li><a class="header__unit" href="#">Contacts</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section class="presentation">
-        <h1 class="presentation__name">Denis Novik</h1>
-        <h2 class="presentation__annotation">UX | UI designer 24 years old, Minsk</h2>
-        <ul class="presentation__lang">
-          <li class="presentation__lang-link">RU</li>
-          <span>|</span>
-          <li class="presentation__lang-link">ENG</li>
-        </ul>
-        <img class="presentation__image" src="./images/BSPP2266.png" alt="Денис Новик">
-      </section>
-    </main>
-    <footer>
 
-    </footer>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Заголовок страницы</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+
+<body class="page">
+  <header class="header">
+    <nav class="header__main-menu">
+      <ul class="header__menu">
+        <li><a class="header__unit" href="#">Home</a></li>
+        <li><a class="header__unit" href="#">About me</a></li>
+        <li><a class="header__unit" href="#">Skills</a></li>
+        <li><a class="header__unit" href="#">Portfolio</a></li>
+        <li><a class="header__unit" href="#">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main">
+    <section class="presentation">
+      <h1 class="presentation__name">Denis Novik</h1>
+      <h2 class="presentation__annotation">UX | UI designer 24 years old, Minsk</h2>
+      <ul class="presentation__lang">
+        <li><a class="presentation__lang-link presentation__lang-link_active" href="#">RU</a></li>
+        <span class="presentation__separator">|</span>
+        <li><a class="presentation__lang-link" href="#">ENG</a></li>
+      </ul>
+      <img class="presentation__image" src="./images/BSPP2266.png" alt="Денис Новик">
+    </section>
+    <section class="about">
+      <h2 class="about__headline">
+        About me
+      </h2>
+      <div class="about__paragraphs">
+        <p class="about__paragraph">
+          Hi, I'm Denis – UX/UI designer from Minsk.<br>I'm interested in design and everything connected with it.
+        </p>
+        <p class="about__paragraph">
+          I'm studying at courses "Web and mobile design interfaces" in IT-Academy.
+        </p>
+        <p class="about__paragraph">
+          Ready to implement excellent projects with wonderful people.
+        </p>
+      </div>
+    </section>
+    <section class="skills">
+      <h2 class="skills__headline">Skills</h2>
+      <h3 class="skills__secondline">I work in such programs as</h3>
+      <div class="skills__programs">
+      <!-- start card -->
+        <div class="skills__program">
+          <img class="skills__photo" src="./images/PS.png" alt="фотошоп">
+          <p class="skills__program-name">Adobe Photoshop</p>
+          <div class="skills__stars">
+            <div class="skills__star skills__star_actvie"></div>
+            <div class="skills__star skills__star_actvie"></div>
+            <div class="skills__star skills__star_actvie"></div>
+            <div class="skills__star skills__star_actvie"></div>
+            <div class="skills__star"></div>
+          </div>
+        </div>
+      <!-- end card -->
+      <div class="skills__program">
+        <img class="skills__photo" src="./images/AI.png" alt="фотошоп">
+        <p class="skills__program-name">Adobe Illustrator</p>
+        <div class="skills__stars">
+          <div class="skills__star skills__star_actvie"></div>
+          <div class="skills__star skills__star_actvie"></div>
+          <div class="skills__star skills__star_actvie"></div>
+          <div class="skills__star skills__star_actvie"></div>
+          <div class="skills__star"></div>
+        </div>
+      </div>
+      <div class="skills__program">
+        <img class="skills__photo" src="./images/AE.png" alt="фотошоп">
+        <p class="skills__program-name">Adobe After Effects</p>
+        <div class="skills__stars">
+          <div class="skills__star skills__star_actvie"></div>
+          <div class="skills__star skills__star_actvie"></div>
+          <div class="skills__star skills__star_actvie"></div>
+          <div class="skills__star skills__star_actvie"></div>
+          <div class="skills__star"></div>
+        </div>
+      </div>
+      <div class="skills__program">
+        <img class="skills__photo" src="./images/Figma.png" alt="фотошоп">
+        <p class="skills__program-name">Figma</p>
+        <div class="skills__stars">
+          <div class="skills__star skills__star_actvie"></div>
+          <div class="skills__star skills__star_actvie"></div>
+          <div class="skills__star skills__star_actvie"></div>
+          <div class="skills__star skills__star_actvie"></div>
+          <div class="skills__star"></div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+  </main>
+  <footer>
+
+  </footer>
+</body>
+
 </html>

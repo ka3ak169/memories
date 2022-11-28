@@ -1,0 +1,9 @@
+.about__paragraph {
+  margin: 0 auto 50px;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.about__paragraph:last-child {
+  margin: 0 auto 0px;
+}
