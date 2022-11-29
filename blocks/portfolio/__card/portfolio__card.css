@@ -1,0 +1,7 @@
+.portfolio__card {
+  margin-top: 100px;
+}
+
+.portfolio__card:first-of-type {
+  margin-top: 47px;
+}
