@@ -3,4 +3,11 @@
   display: block;
   text-align: center;
   padding: 113px 0 96px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 800px) {
+  .portfolio {
+    padding: 81px 30px 81px;
+  }
 }

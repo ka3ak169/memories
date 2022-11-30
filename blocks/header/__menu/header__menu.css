@@ -8,4 +8,5 @@
   font-size: 18px;
   line-height: 23px;
   margin: 32px 0 33px;
+  white-space: nowrap;
 }

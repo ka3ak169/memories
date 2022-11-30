@@ -3,3 +3,9 @@
   flex-direction: column;
   padding: 91px 0 111px;
 }
+
+@media screen and (max-width: 1024px) {
+  .skills {
+    padding: 83px 0 99px;
+  }
+}

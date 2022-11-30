@@ -5,3 +5,14 @@
 .portfolio__card:first-of-type {
   margin-top: 47px;
 }
+
+@media screen and (max-width: 800px) {
+  .portfolio__card {
+    margin-top: 78px;
+  }
+
+  .portfolio__card:first-of-type {
+    margin-top: 65px;
+  }
+
+}

@@ -5,3 +5,9 @@
   line-height: 22px;
   font-weight: 400;
 }
+
+@media screen and (max-width: 800px) {
+  .skills__secondline {
+    margin-top: 50px;
+  }
+}

@@ -5,3 +5,9 @@
   line-height: 17px;
   color: #828282;
 }
+
+@media screen and (max-width: 800px) {
+  .footer__caption {
+    margin-top: 49px;
+  }
+}

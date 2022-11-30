@@ -4,3 +4,9 @@
   font-weight: 400;
   margin: 20px auto 0;
 }
+
+@media screen and (max-width: 800px) {
+  .footer__offer {
+    margin-top: 27px;
+  }
+}

@@ -1,3 +1,9 @@
 .portfolio__sign-box {
   margin: 45px auto 0;
 }
+
+@media screen and (max-width: 800px) {
+  .portfolio__sign-box {
+    margin-top: 35px;
+  }
+}

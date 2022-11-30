@@ -4,4 +4,17 @@
   margin: 0 auto 0;
   text-align: center;
   width: 100%;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    padding: 82px 0 90px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .footer {
+    padding: 82px 30px 90px;
+  }
 }

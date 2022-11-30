@@ -1,7 +1,19 @@
 .about {
   display: block;
   margin: 104px auto 0;
-  padding: 120px 0 107px ;
+  padding: 120px 0 107px;
   text-align: center;
   background-color: #F6F6F6;
+}
+
+@media screen and (max-width: 1024px) {
+  .about {
+    padding: 81px 0 76px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about {
+    padding: 81px 30px 76px;
+  }
 }
