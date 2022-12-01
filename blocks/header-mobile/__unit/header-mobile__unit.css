@@ -1,0 +1,14 @@
+.header-mobile__unit {
+  text-decoration: none;
+  cursor: pointer;
+  color: #828282;
+  transition: color .3s linear;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 42px;
+  margin-bottom: 68px;
+}
+
+.header-mobile__unit:hover {
+  color: #000;
+}

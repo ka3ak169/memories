@@ -6,6 +6,17 @@
 @import url(../blocks/header/__main-menu/header__main-menu.css);
 @import url(../blocks/header/__menu/header__menu.css);
 @import url(../blocks/header/__unit/header__unit.css);
+/* main menu mobile */
+@import url(../blocks/header-mobile/header-mobile.css);
+@import url(../blocks/header-mobile/__close-btn/header-mobile__close-btn.css);
+@import url(../blocks/header-mobile/__lang-link/header-mobile__lang-link.css);
+@import url(../blocks/header-mobile/__lang-link/_active/header-mobile__lang-link_active.css);
+@import url(../blocks/header-mobile/__lang/header-mobile__lang.css);
+@import url(../blocks/header-mobile/__main-menu/header-mobile__main-menu.css);
+@import url(../blocks/header-mobile/__menu/header-mobile__menu.css);
+@import url(../blocks/header-mobile/__separator/header-mobile__separator.css);
+@import url(../blocks/header-mobile/__unit/header-mobile__unit.css);
+@import url(../blocks/header-mobile/__unit-box/header-mobile__unit-box.css);
 /* Denis Novik */
 @import url(../blocks/presentation/presentation.css);
 @import url(../blocks/presentation/__annotation/presentation__annotation.css);
@@ -46,3 +57,9 @@
 @import url(../blocks/footer/__icons/footer__icons.css);
 @import url(../blocks/footer/__offer/footer__offer.css);
 @import url(../blocks/footer/__title/footer__title.css);
+/* presentation-mobile */
+@import url(../blocks/presentation-mobile/presentation-mobile.css);
+@import url(../blocks/presentation-mobile/__annotation/presentation-mobile__annotation.css);
+@import url(../blocks/presentation-mobile/__image/presentation-mobile__image.css);
+@import url(../blocks/presentation-mobile/__name/presentation-mobile__name.css);
+@import url(../blocks/presentation-mobile/__open-menu/presentation-mobile__open-menu.css);

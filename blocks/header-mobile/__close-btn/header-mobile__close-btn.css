@@ -1,0 +1,9 @@
+.header-mobile__close-btn {
+  position: absolute;
+  background-image: url(../../../images/cls-btn.png);
+  min-width: 23px;
+  min-height: 23px;
+  top: 66px;
+  right: 28px;
+  cursor: pointer;
+}

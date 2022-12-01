@@ -1,0 +1,7 @@
+.header-mobile__menu {
+  list-style-type: none;
+  display: flex;  
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
