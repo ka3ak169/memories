@@ -10,3 +10,9 @@
   margin: 32px 0 33px;
   white-space: nowrap;
 }
+
+@media screen and (max-width: 425px) {
+  .header__menu {
+    font-size: 1px;
+  }
+}
