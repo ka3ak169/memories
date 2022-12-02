@@ -8,7 +8,7 @@
   /* visibility: hidden; */
 }
 
-@media screen and (min-width: 475px) {
+@media screen and (min-width: 426px) {
   .presentation-mobile {
     visibility: hidden;
     height: 0;
