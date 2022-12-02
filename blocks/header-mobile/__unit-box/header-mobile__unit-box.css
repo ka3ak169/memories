@@ -1,8 +1,8 @@
 .header-mobile__unit-box {
   margin-bottom: 68px;
 }
-/* 
-@media screen and (max-width: 375px) {
+
+/* @media screen and (max-width: 375px) {
   .header-mobile__unit-box {
     margin-bottom: 48px;
   }

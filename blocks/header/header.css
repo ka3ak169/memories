@@ -10,3 +10,10 @@
     padding: 0 30px 0;
   }
 }
+
+@media screen and (max-width: 475px) {
+  .header {
+    visibility: hidden;
+    height: 0;
+  }
+}
