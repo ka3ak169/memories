@@ -17,3 +17,9 @@
     padding: 81px 30px 76px;
   }
 }
+
+@media screen and (max-width: 425px) {
+  .about {
+    margin-top: 83px;
+  }
+}

@@ -1,0 +1,12 @@
+.header__lang-box {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 425px) {
+  .header__lang-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    visibility: visible;
+  }
+}

@@ -1,12 +1,7 @@
-.header-mobile__close-btn {
-  visibility: hidden;
-}
-
 @media screen and (max-width: 425px) {
-  .header-mobile__close-btn {
-    /* visibility: visible; */
-    position: absolute;
+  .header__close-btn {
     background-image: url(../../../images/cls-btn.png);
+    background-repeat: no-repeat;
     min-width: 23px;
     min-height: 23px;
     top: 66px;

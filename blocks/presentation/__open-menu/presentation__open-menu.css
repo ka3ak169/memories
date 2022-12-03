@@ -1,0 +1,16 @@
+.presentation__open-menu {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 425px) {
+  .presentation__open-menu {
+    background-image: url(../../../images/Group\ 3.png);
+    min-height: 19px;
+    min-width: 33px;
+    position: absolute;
+    top: 65px;
+    right: 30px;
+    cursor: pointer;
+    visibility: visible;
+  }
+}

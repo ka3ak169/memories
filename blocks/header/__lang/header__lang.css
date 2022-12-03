@@ -1,13 +1,14 @@
-.header-mobile__lang {
-  visibility: hidden;
+.header__lang {
   max-height: 0;
   margin: 0;
+  transform: scale(-1);
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
 }
 
 @media screen and (max-width: 425px) {
-    .header-mobile__lang {
-    /* visibility: visible; */
-    position: absolute;
+    .header__lang {
     margin: 0;
     padding: 0;
     display: flex;
@@ -15,9 +16,8 @@
     list-style-type: none;
     writing-mode: vertical-lr;
     transform: scale(1);
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 700;
+    font-size: 34px;
+    line-height: 42px;
     right: 28px;
     bottom: 57px;
     max-height: 100%;
