@@ -24,7 +24,7 @@
     left: 0;
     padding: 66px 26px 57px;
     box-sizing: border-box;
-    /* visibility: hidden; */
-    visibility: visible;
+    transition: .5s;
+    transform: translateX(-100%);
   }
 }

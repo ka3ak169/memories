@@ -1,0 +1,12 @@
+.portfolio__add-btn {
+  height: 50px;
+  width: 100px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 459px) {
+  .portfolio__add-btn {
+    margin-top: 20px;
+  }
+}
