@@ -1,0 +1,9 @@
+.work-popup__submit {
+  max-width: 150px;
+  width: 100%;
+  min-height: 35px;
+  margin-top: 40px;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 5px;
+}

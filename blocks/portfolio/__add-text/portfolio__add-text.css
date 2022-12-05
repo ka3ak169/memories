@@ -4,3 +4,9 @@
   font-weight: 700;
   margin: 0 20px 0 0;
 }
+
+@media screen and (max-width: 400px) {
+  .portfolio__add-text {
+    margin: 0;
+  }
+}

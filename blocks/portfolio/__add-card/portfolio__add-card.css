@@ -9,3 +9,9 @@
   align-content: center;
   margin-top: 20px;
 }
+
+@media screen and (max-width: 425px) {
+  .portfolio__add-card {
+    justify-content: center;
+  }
+}

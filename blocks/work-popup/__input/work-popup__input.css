@@ -1,0 +1,12 @@
+.work-popup__input {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.work-popup__input:focus {
+  outline-color: green;
+}

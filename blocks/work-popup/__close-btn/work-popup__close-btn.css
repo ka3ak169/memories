@@ -1,0 +1,26 @@
+.work-popup__close-btn {
+  position: absolute;
+  top: -35px;
+  right: -35px;
+  height: 23px;
+  width: 23px;
+  background-image: url(../../../images/cls-btn-bl.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0);
+  border-style: none;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity .4s;
+}
+
+.work-popup__close-btn:hover {
+  opacity: .5;
+}
+
+@media screen and (max-width: 500px) {
+  .work-popup__close-btn {
+    top: 15px;
+    right: 15px;
+  }
+}

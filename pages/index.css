@@ -61,3 +61,14 @@
 @import url(../blocks/footer/__icons/footer__icons.css);
 @import url(../blocks/footer/__offer/footer__offer.css);
 @import url(../blocks/footer/__title/footer__title.css);
+/* work-poppup */
+@import url(../blocks/work-popup/work-popup.css);
+@import url(../blocks/work-popup/__close-btn/work-popup__close-btn.css);
+@import url(../blocks/work-popup/__container/work-popup__container.css);
+@import url(../blocks/work-popup/__error/work-popup__error.css);
+@import url(../blocks/work-popup/__field/work-popup__field.css);
+@import url(../blocks/work-popup/__form/work-popup__form.css);
+@import url(../blocks/work-popup/__headline/work-popup__headline.css);
+@import url(../blocks/work-popup/__input/work-popup__input.css);
+@import url(../blocks/work-popup/__submit/work-popup__submit.css);
+@import url(../blocks/work-popup/_open/work-popup_open.css);
