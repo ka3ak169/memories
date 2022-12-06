@@ -46,6 +46,7 @@
 @import url(../blocks/portfolio/portfolio.css);
 @import url(../blocks/portfolio/__card/portfolio__card.css);
 @import url(../blocks/portfolio/__cards/portfolio__cards.css);
+@import url(../blocks/portfolio/__close-btn/portfolio__close-btn.css);
 @import url(../blocks/portfolio/__sign/portfolio__sign.css);
 @import url(../blocks/portfolio/__title/portfolio__title.css);
 @import url(../blocks/portfolio/__sign-box/portfolio__sign-box.css);

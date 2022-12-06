@@ -1,0 +1,16 @@
+.portfolio__close-btn {
+  background-image: url(../../../images/cls-btn.png);
+  background-repeat: no-repeat;
+  width: 23px;
+  height: 23px;
+  cursor: pointer;
+  align-self: center;
+  justify-self: center;
+  margin: 0 50px 10px auto;
+}
+
+@media screen and (max-width: 600px) {
+  .portfolio__close-btn {
+    margin: 0 20px 10px auto;
+  }
+}
