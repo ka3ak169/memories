@@ -1,26 +1,26 @@
 const selectors = {
-  menu: ".header",
-  langBox: ".header__lang-box",
-  openBtn: ".presentation__open-menu",
-  closeBtn: ".header__close-btn",
-  workPopup: ".work-popup",
-  openWorkPopBtn: ".portfolio__add-btn",
-  closeWorkPopBtn: ".work-popup__close-btn",
-  workForm: ".work-popup__form",
-  workInputName: ".work-popup__input_name",
-  workInputImage: ".work-popup__input_image",
-  portfolioTitle: ".portfolio__title",
-  skillsTemplate: ".skills-template",
-  skillsPhoto: ".skills__photo",
-  skillsName: ".skills__program-name",
-  skillsContainer: ".skills__program",
-  skillsSection: ".skills__programs",
-  portfolioTemplate: ".portfolio-template",
-  portfolioCard: ".portfolio__card",
-  portfolioContainer: ".portfolio__cards",
-  portfolioCloseBtn: ".portfolio__close-btn",
-  portfoiloImage: ".portfolio__image",
-  portfolioName: ".portfolio__sign",
+  menu: '.header',
+  langBox: '.header__lang-box',
+  openBtn: '.presentation__open-menu',
+  closeBtn: '.header__close-btn',
+  workPopup: '.work-popup',
+  openWorkPopBtn: '.portfolio__add-btn',
+  closeWorkPopBtn: '.work-popup__close-btn',
+  workForm: '.work-popup__form',
+  workInputName: '.work-popup__input_name',
+  workInputImage: '.work-popup__input_image',
+  portfolioTitle: '.portfolio__title',
+  skillsTemplate: '.skills-template',
+  skillsPhoto: '.skills__photo',
+  skillsName: '.skills__program-name',
+  skillsContainer: '.skills__program',
+  skillsSection: '.skills__programs',
+  portfolioTemplate: '.portfolio-template',
+  portfolioCard: '.portfolio__card',
+  portfolioContainer: '.portfolio__cards',
+  portfolioCloseBtn: '.portfolio__close-btn',
+  portfoiloImage: '.portfolio__image',
+  portfolioName: '.portfolio__sign',
 };
 
 const menu = document.querySelector(selectors.menu);
@@ -40,21 +40,21 @@ const portfolioTemplate = document.querySelector(selectors.portfolioTemplate);
 const portfolioContainer = document.querySelector(selectors.portfolioContainer);
 
 function openMenu() {
-  menu.classList.add("header_open");
-  langBox.classList.add("header__lang-box_open");
+  menu.classList.add('header_open');
+  langBox.classList.add('header__lang-box_open');
 }
 
 function closeMenu() {
-  menu.classList.remove("header_open");
-  langBox.classList.remove("header__lang-box_open");
+  menu.classList.remove('header_open');
+  langBox.classList.remove('header__lang-box_open');
 }
 
 function openWorkPopup() {
-  workPopup.classList.add("work-popup_open");
+  workPopup.classList.add('work-popup_open');
 }
 
 function closeWorkpopup() {
-  workPopup.classList.remove("work-popup_open");
+  workPopup.classList.remove('work-popup_open');
   workForm.reset();
 }
 
@@ -66,7 +66,8 @@ function closeWorkByOverlay(evt) {
 }
 
 function createSkillsCard(name, image, template) {
-  const skillsCard = template.content.querySelector(selectors.skillsContainer)
+  const skillsCard = template.content
+    .querySelector(selectors.skillsContainer)
     .cloneNode(true);
 
   const skillsPhoto = skillsCard.querySelector(selectors.skillsPhoto);
@@ -77,51 +78,46 @@ function createSkillsCard(name, image, template) {
   skillsName.textContent = name;
 
   return skillsCard;
-};
+}
 
-const renderSkillsCard = function (data, place) {
-  const cardData = createSkillsCard(data.name, data.image, skillsTemplate);
-  place.appendChild(cardData);
+function renderSkillsCard(data, place) {
+  place.appendChild(createSkillsCard(data.name, data.image, skillsTemplate));
 };
 
 function createInitialSkillsCard() {
   const initialSkills = [
     {
-      name: "Adobe Illustrator",
-      image: "./images/AI.png",
+      name: 'Adobe Illustrator',
+      image: './images/AI.png',
     },
     {
-      name: "Adobe After Effects",
-      image: "./images/AE.png",
+      name: 'Adobe After Effects',
+      image: './images/AE.png',
     },
     {
-      name: "Adobe Photoshop",
-      image: "./images/PS.png",
+      name: 'Adobe Photoshop',
+      image: './images/PS.png',
     },
     {
-      name: "Figma",
-      image: "./images/Figma.png",
+      name: 'Figma',
+      image: './images/Figma.png',
     },
   ];
 
   initialSkills.forEach(function (card) {
     renderSkillsCard(card, skillsSection);
   });
-};
+}
 
 createInitialSkillsCard();
 
-function createPortfolioCard(name, link) {
-  const portfolioCard = portfolioTemplate
-    .content.querySelector(selectors.portfolioCard)
+function createPortfolioCard(name, link, template) {
+  const portfolioCard = template.content
+    .querySelector(selectors.portfolioCard)
     .cloneNode(true);
-  
-  const portfoiloImage = portfolioCard.querySelector(
-    selectors.portfoiloImage
-  );
-  const portfolioName = portfolioCard.querySelector(
-    selectors.portfolioName
-  );
+
+  const portfoiloImage = portfolioCard.querySelector(selectors.portfoiloImage);
+  const portfolioName = portfolioCard.querySelector(selectors.portfolioName);
   const portfolioCloseBtn = portfolioCard.querySelector(
     selectors.portfolioCloseBtn
   );
@@ -130,31 +126,32 @@ function createPortfolioCard(name, link) {
   portfoiloImage.atl = name;
   portfolioName.textContent = name;
 
-  portfolioCloseBtn.addEventListener("click", () => {
+  portfolioCloseBtn.addEventListener('click', () => {
     portfolioCard.remove();
   });
 
   return portfolioCard;
-};
+}
 
-const renderPortfolioCard = function (data, place) {
-  const cardData = createPortfolioCard(data.name, data.link, portfolioTemplate);
-  place.appendChild(cardData);
+function renderPortfolioCard(data, place) {
+  place.appendChild(
+    createPortfolioCard(data.name, data.link, portfolioTemplate)
+  );
 };
 
 function createInitialPortCard() {
   const initialPortfolio = [
     {
-      name: "Online fashion store - Homepage",
-      link: "./images/fashion.png",
+      name: 'Online fashion store - Homepage',
+      link: './images/fashion.png',
     },
     {
-      name: "Reebok Store - Concept",
-      link: "./images/reebok_web.png",
+      name: 'Reebok Store - Concept',
+      link: './images/reebok_web.png',
     },
     {
-      name: "Braun Landing Page - Concept",
-      link: "./images/braun.png",
+      name: 'Braun Landing Page - Concept',
+      link: './images/braun.png',
     },
   ];
 
@@ -177,9 +174,9 @@ function popupFormSbm(evt) {
   closeWorkpopup();
 }
 
-openBtn.addEventListener("click", openMenu);
-closeBtn.addEventListener("click", closeMenu);
-openWorkPopBtn.addEventListener("click", openWorkPopup);
-closeWorkPopBtn.addEventListener("click", closeWorkpopup);
-workPopup.addEventListener("click", closeWorkByOverlay);
-workForm.addEventListener("submit", popupFormSbm);
+openBtn.addEventListener('click', openMenu);
+closeBtn.addEventListener('click', closeMenu);
+openWorkPopBtn.addEventListener('click', openWorkPopup);
+closeWorkPopBtn.addEventListener('click', closeWorkpopup);
+workPopup.addEventListener('click', closeWorkByOverlay);
+workForm.addEventListener('submit', popupFormSbm);
