@@ -34,6 +34,10 @@ const workForm = workPopup.querySelector(selectors.workForm);
 const workInputName = workForm.querySelector(selectors.workInputName);
 const workInputImage = workForm.querySelector(selectors.workInputImage);
 const portfolioTitle = document.querySelector(selectors.portfolioTitle);
+const skillsSection = document.querySelector(selectors.skillsSection);
+const skillsTemplate = document.querySelector(selectors.skillsTemplate);
+const portfolioTemplate = document.querySelector(selectors.portfolioTemplate);
+const portfolioContainer = document.querySelector(selectors.portfolioContainer);
 
 function openMenu() {
   menu.classList.add("header_open");
@@ -61,21 +65,24 @@ function closeWorkByOverlay(evt) {
   closeWorkpopup();
 }
 
-function createSkillsCard(name, image) {
-  const template = document
-    .querySelector(selectors.skillsTemplate)
-    .content.querySelector(selectors.skillsContainer)
+function createSkillsCard(name, image, template) {
+  const skillsCard = template.content.querySelector(selectors.skillsContainer)
     .cloneNode(true);
-  const skillsSection = document.querySelector(selectors.skillsSection);
-  const skillsPhoto = template.querySelector(selectors.skillsPhoto);
-  const skillsName = template.querySelector(selectors.skillsName);
+
+  const skillsPhoto = skillsCard.querySelector(selectors.skillsPhoto);
+  const skillsName = skillsCard.querySelector(selectors.skillsName);
 
   skillsPhoto.src = image;
   skillsPhoto.alt = name;
   skillsName.textContent = name;
 
-  skillsSection.appendChild(template);
-}
+  return skillsCard;
+};
+
+const renderSkillsCard = function (data, place) {
+  const cardData = createSkillsCard(data.name, data.image, skillsTemplate);
+  place.appendChild(cardData);
+};
 
 function createInitialSkillsCard() {
   const initialSkills = [
@@ -98,27 +105,24 @@ function createInitialSkillsCard() {
   ];
 
   initialSkills.forEach(function (card) {
-    createSkillsCard(card.name, card.image);
+    renderSkillsCard(card, skillsSection);
   });
-}
+};
 
 createInitialSkillsCard();
 
 function createPortfolioCard(name, link) {
-  const portfolioTemplate = document
-    .querySelector(selectors.portfolioTemplate)
+  const portfolioCard = portfolioTemplate
     .content.querySelector(selectors.portfolioCard)
     .cloneNode(true);
-  const portfolioContainer = document.querySelector(
-    selectors.portfolioContainer
-  );
-  const portfoiloImage = portfolioTemplate.querySelector(
+  
+  const portfoiloImage = portfolioCard.querySelector(
     selectors.portfoiloImage
   );
-  const portfolioName = portfolioTemplate.querySelector(
+  const portfolioName = portfolioCard.querySelector(
     selectors.portfolioName
   );
-  const portfolioCloseBtn = portfolioTemplate.querySelector(
+  const portfolioCloseBtn = portfolioCard.querySelector(
     selectors.portfolioCloseBtn
   );
 
@@ -127,11 +131,16 @@ function createPortfolioCard(name, link) {
   portfolioName.textContent = name;
 
   portfolioCloseBtn.addEventListener("click", () => {
-    portfolioTemplate.remove();
+    portfolioCard.remove();
   });
 
-  portfolioContainer.appendChild(portfolioTemplate);
-}
+  return portfolioCard;
+};
+
+const renderPortfolioCard = function (data, place) {
+  const cardData = createPortfolioCard(data.name, data.link, portfolioTemplate);
+  place.appendChild(cardData);
+};
 
 function createInitialPortCard() {
   const initialPortfolio = [
@@ -150,7 +159,7 @@ function createInitialPortCard() {
   ];
 
   initialPortfolio.forEach((card) => {
-    createPortfolioCard(card.name, card.link);
+    renderPortfolioCard(card, portfolioContainer);
   });
 }
 
@@ -158,7 +167,13 @@ createInitialPortCard();
 
 function popupFormSbm(evt) {
   evt.preventDefault();
-  createPortfolioCard(workInputName.value, workInputImage.value);
+
+  const data = {
+    name: workInputName.value,
+    link: workInputImage.value,
+  };
+  renderPortfolioCard(data, portfolioContainer);
+
   closeWorkpopup();
 }
 
