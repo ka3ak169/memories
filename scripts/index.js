@@ -1,5 +1,6 @@
 const selectors = {
   menu: '.header',
+  page: '.page',
   langBox: '.header__lang-box',
   openBtn: '.presentation__open-menu',
   closeBtn: '.header__close-btn',
@@ -24,6 +25,7 @@ const selectors = {
 };
 
 const menu = document.querySelector(selectors.menu);
+const page = document.querySelector(selectors.page);
 const langBox = menu.querySelector(selectors.langBox);
 const openBtn = document.querySelector(selectors.openBtn);
 const closeBtn = langBox.querySelector(selectors.closeBtn);
@@ -42,28 +44,28 @@ const portfolioContainer = document.querySelector(selectors.portfolioContainer);
 function openMenu() {
   menu.classList.add('header_open');
   langBox.classList.add('header__lang-box_open');
-}
+};
 
 function closeMenu() {
   menu.classList.remove('header_open');
   langBox.classList.remove('header__lang-box_open');
-}
+};
 
 function openWorkPopup() {
   workPopup.classList.add('work-popup_open');
-}
+};
 
 function closeWorkpopup() {
   workPopup.classList.remove('work-popup_open');
   workForm.reset();
-}
+};
 
 function closeWorkByOverlay(evt) {
   if (evt.target !== evt.currentTarget) {
     return;
   }
   closeWorkpopup();
-}
+};
 
 function createSkillsCard(name, image, template) {
   const skillsCard = template.content
@@ -78,7 +80,7 @@ function createSkillsCard(name, image, template) {
   skillsName.textContent = name;
 
   return skillsCard;
-}
+};
 
 function renderSkillsCard(data, place) {
   place.appendChild(createSkillsCard(data.name, data.image, skillsTemplate));
@@ -107,7 +109,7 @@ function createInitialSkillsCard() {
   initialSkills.forEach(function (card) {
     renderSkillsCard(card, skillsSection);
   });
-}
+};
 
 createInitialSkillsCard();
 
@@ -131,12 +133,10 @@ function createPortfolioCard(name, link, template) {
   });
 
   return portfolioCard;
-}
+};
 
 function renderPortfolioCard(data, place) {
-  place.appendChild(
-    createPortfolioCard(data.name, data.link, portfolioTemplate)
-  );
+  place.appendChild(createPortfolioCard(data.name, data.link, portfolioTemplate));
 };
 
 function createInitialPortCard() {
@@ -158,7 +158,7 @@ function createInitialPortCard() {
   initialPortfolio.forEach((card) => {
     renderPortfolioCard(card, portfolioContainer);
   });
-}
+};
 
 createInitialPortCard();
 
@@ -172,8 +172,18 @@ function popupFormSbm(evt) {
   renderPortfolioCard(data, portfolioContainer);
 
   closeWorkpopup();
-}
+};
 
+
+function starChange(evt) {
+  if (evt.target.classList.contains('skills__star')) {
+    evt.target.classList.toggle('skills__star_actvie');
+  }
+  // console.log(evt.target);
+  // console.log(evt.currentTarget);
+};
+
+page.addEventListener('click', starChange);
 openBtn.addEventListener('click', openMenu);
 closeBtn.addEventListener('click', closeMenu);
 openWorkPopBtn.addEventListener('click', openWorkPopup);

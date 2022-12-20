@@ -72,4 +72,5 @@
 @import url(../blocks/work-popup/__headline/work-popup__headline.css);
 @import url(../blocks/work-popup/__input/work-popup__input.css);
 @import url(../blocks/work-popup/__submit/work-popup__submit.css);
+@import url(../blocks/work-popup/__submit/_disabled/work-popup__submit_disabled.css);
 @import url(../blocks/work-popup/_open/work-popup_open.css);

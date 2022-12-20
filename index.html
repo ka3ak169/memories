@@ -87,13 +87,14 @@
     <div class="work-popup__container">
       <h2 class="work-popup__headline">Добавить в портфолио</h2>
       <button class="work-popup__close-btn" type="button" name="close"></button>
-      <form class="work-popup__form">
+      <form class="work-popup__form" name="work-form" novalidate>
         <fieldset class="work-popup__field">
-          <input class="work-popup__input work-popup__input_name" type="text" name="name" value="" placeholder="название" minlength="2" maxlength="40" required>
-          <span class="work-popup__error"></span>
-          <input class="work-popup__input work-popup__input_image" type="text" name="image" value="" placeholder="ссылка на картинку" minlength="2" maxlength="1000" required>
-          <span class="work-popup__error"></span>
+          <input class="work-popup__input work-popup__input_name" id="work_name" type="text" name="name" value="" placeholder="название" minlength="2" maxlength="40" required>
+          <span class="work-popup__error work_name-error"></span>
+          <input class="work-popup__input work-popup__input_image" id="work_image" type="url" name="image" value="" placeholder="ссылка на картинку" minlength="2" maxlength="1000" required>
+          <span class="work-popup__error work_image-error"></span>
         </fieldset>
+        <!-- <button class="work-popup__submit work-popup__submit_disabled" type="submit" name="add-btn" disabled>Добавить</button> -->
         <button class="work-popup__submit" type="submit" name="add-btn">Добавить</button>
       </form>
     </div>

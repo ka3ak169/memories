@@ -10,3 +10,7 @@
 .work-popup__input:focus {
   outline-color: green;
 }
+
+.work-popup__input:invalid {
+  outline-color: red;
+}
