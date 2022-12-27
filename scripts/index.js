@@ -22,6 +22,10 @@ const selectors = {
   portfolioCloseBtn: '.portfolio__close-btn',
   portfoiloImage: '.portfolio__image',
   portfolioName: '.portfolio__sign',
+  messageOpenBtn: '.footer__button',
+  messageCloseBtn: '.feedback-popup__close-btn',
+  feedbackPopup: '.feedback-popup',
+  feedbackPopupForm: '.feedback-popup__form',
 };
 
 const menu = document.querySelector(selectors.menu);
@@ -40,6 +44,10 @@ const skillsSection = document.querySelector(selectors.skillsSection);
 const skillsTemplate = document.querySelector(selectors.skillsTemplate);
 const portfolioTemplate = document.querySelector(selectors.portfolioTemplate);
 const portfolioContainer = document.querySelector(selectors.portfolioContainer);
+const feedbackPopup = document.querySelector(selectors.feedbackPopup);
+const messageCloseBtn = feedbackPopup.querySelector(selectors.messageCloseBtn);
+const messageOpenBtn = document.querySelector(selectors.messageOpenBtn);
+const feedbackPopupForm = feedbackPopup.querySelector(selectors.feedbackPopupForm);
 
 function openMenu() {
   menu.classList.add('header_open');
@@ -51,20 +59,21 @@ function closeMenu() {
   langBox.classList.remove('header__lang-box_open');
 };
 
-function openWorkPopup() {
-  workPopup.classList.add('work-popup_open');
+function openPopup(popup) {
+  popup.classList.add('popup_open');  
 };
 
-function closeWorkpopup() {
-  workPopup.classList.remove('work-popup_open');
-  workForm.reset();
+function closePopup(popup) {
+  popup.classList.remove('popup_open');  
 };
 
-function closeWorkByOverlay(evt) {
+function closeWorkByOverlay(popup) {
+ popup.addEventListener('click', (evt) => {
   if (evt.target !== evt.currentTarget) {
     return;
   }
-  closeWorkpopup();
+  closePopup(popup);
+ });
 };
 
 function createSkillsCard(name, image, template) {
@@ -170,8 +179,8 @@ function popupFormSbm(evt) {
     link: workInputImage.value,
   };
   renderPortfolioCard(data, portfolioContainer);
-
-  closeWorkpopup();
+  workForm.reset();
+  closePopup(workPopup);
 };
 
 
@@ -183,10 +192,21 @@ function starChange(evt) {
   // console.log(evt.currentTarget);
 };
 
+function popupFeedbackSbm(evt) {
+  evt.preventDefault();
+  feedbackPopupForm.reset();
+  closePopup(feedbackPopup);
+  alert('форму отправили!');
+}
+
 page.addEventListener('click', starChange);
 openBtn.addEventListener('click', openMenu);
 closeBtn.addEventListener('click', closeMenu);
-openWorkPopBtn.addEventListener('click', openWorkPopup);
-closeWorkPopBtn.addEventListener('click', closeWorkpopup);
-workPopup.addEventListener('click', closeWorkByOverlay);
+openWorkPopBtn.addEventListener('click', () => { openPopup(workPopup) });
+closeWorkPopBtn.addEventListener('click', () => { closePopup(workPopup) });
+messageOpenBtn.addEventListener('click', () => { openPopup(feedbackPopup) });
+messageCloseBtn.addEventListener('click', () => { closePopup(feedbackPopup) });
+closeWorkByOverlay(workPopup);
+closeWorkByOverlay(feedbackPopup);
 workForm.addEventListener('submit', popupFormSbm);
+feedbackPopupForm.addEventListener('submit', popupFeedbackSbm);
