@@ -1,20 +1,8 @@
 const validateSelectors = {
-  workPopupform: '.work-popup__form',
-  workPopupformInput: '.work-popup__input',
-  feedbackPopupform: '.feedback-popup__form',
-  feedbackPopupformInput: '.feedback-popup__input',
   formInput: '.popup__input',
   popupForm: '.popup__form',
   popupSubmitBtn: '.popup__submit',
 };
-
-const workPopupform = document.querySelector(validateSelectors.workPopupform);
-const workPopupformInput = workPopupform.querySelector(validateSelectors.workPopupformInput);
-const workPopupformError = workPopupform.querySelector(`.${workPopupformInput.id}-error`);
-const feedbackPopupform = document.querySelector(validateSelectors.feedbackPopupform);
-const feedbackPopupformInput = feedbackPopupform.querySelector(validateSelectors.feedbackPopupformInput);
-const feedbackPopupformError = feedbackPopupform.querySelector(`.${feedbackPopupform.id}-error`);
-
 
 // показываем ошибку
 function showInputError(form, input, errorMessage) {

@@ -10,7 +10,6 @@ const selectors = {
   workForm: '.work-popup__form',
   workInputName: '.work-popup__input_name',
   workInputImage: '.work-popup__input_image',
-  portfolioTitle: '.portfolio__title',
   skillsTemplate: '.skills-template',
   skillsPhoto: '.skills__photo',
   skillsName: '.skills__program-name',
@@ -40,7 +39,6 @@ const closeWorkPopBtn = workPopup.querySelector(selectors.closeWorkPopBtn);
 const workForm = workPopup.querySelector(selectors.workForm);
 const workInputName = workForm.querySelector(selectors.workInputName);
 const workInputImage = workForm.querySelector(selectors.workInputImage);
-const portfolioTitle = document.querySelector(selectors.portfolioTitle);
 const skillsSection = document.querySelector(selectors.skillsSection);
 const skillsTemplate = document.querySelector(selectors.skillsTemplate);
 const portfolioTemplate = document.querySelector(selectors.portfolioTemplate);
@@ -192,8 +190,6 @@ function starChange(evt) {
   if (evt.target.classList.contains('skills__star')) {
     evt.target.classList.toggle('skills__star_actvie');
   }
-  // console.log(evt.target);
-  // console.log(evt.currentTarget);
 };
 
 function popupFeedbackSbm(evt) {
