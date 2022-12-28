@@ -1,10 +1,13 @@
 .popup__input {
-  max-width: 100%;
+  max-width: 450px;
   width: 100%;
   box-sizing: border-box;
-  margin-top: 30px;
   height: 30px;
   border-radius: 5px;
+}
+
+.popup__input:first-child {
+  margin-top: 30px;
 }
 
 .popup__input:focus {

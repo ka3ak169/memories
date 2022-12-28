@@ -26,6 +26,7 @@ const selectors = {
   messageCloseBtn: '.feedback-popup__close-btn',
   feedbackPopup: '.feedback-popup',
   feedbackPopupForm: '.feedback-popup__form',
+  popupSbmBtn: '.popup__submit',
 };
 
 const menu = document.querySelector(selectors.menu);
@@ -64,7 +65,10 @@ function openPopup(popup) {
 };
 
 function closePopup(popup) {
-  popup.classList.remove('popup_open');  
+  popup.classList.remove('popup_open');
+  const popupSbmBtn = popup.querySelector(selectors.popupSbmBtn);
+  popupSbmBtn.classList.add('popup__submit_disabled');
+  popupSbmBtn.setAttribute('disabled', true);
 };
 
 function closeWorkByOverlay(popup) {

@@ -2,4 +2,6 @@
   display: inherit;
   flex-direction: inherit;
   align-items: inherit;
+  max-width: 100%;
+  width: 100%;
 }
