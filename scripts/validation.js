@@ -2,6 +2,7 @@ const validateSelectors = {
   formInput: '.popup__input',
   popupForm: '.popup__form',
   popupSubmitBtn: '.popup__submit',
+  submitBtnDisabled: 'popup__submit_disabled',
 };
 
 // показываем ошибку
@@ -23,25 +24,25 @@ function isValid(form, input) {
   }
 };
 // слушаем все формы
-function setEventListeners(form) {
-  const inputList = Array.from(form.querySelectorAll(validateSelectors.formInput));
-  const popupSubmitBtn = form.querySelector(validateSelectors.popupSubmitBtn);
+function setEventListeners(form, config) {
+  const inputList = Array.from(form.querySelectorAll(config.formInput));
+  const popupSubmitBtn = form.querySelector(config.popupSubmitBtn);
   
-  toggleButtonState(inputList, popupSubmitBtn);
+  toggleButtonState(inputList, popupSubmitBtn, config);
 
   inputList.forEach((input) => {
     input.addEventListener('input', () => {
       isValid(form, input);
-      toggleButtonState(inputList, popupSubmitBtn);
+      toggleButtonState(inputList, popupSubmitBtn, config);
     });
   });
 };
 // ставим обработчик на все формы
-function enableValidation() {
-  const formList = Array.from(document.querySelectorAll(validateSelectors.popupForm));
+function enableValidation(config) {
+  const formList = Array.from(document.querySelectorAll(config.popupForm));
 
   formList.forEach((form) => {
-    setEventListeners(form);
+    setEventListeners(form, config);
   });
 };
 // связываем валидность всех инпутов на форме
@@ -51,14 +52,14 @@ function hasInvalidInput(inputList) {
   });
 };
 // меняем кнопку
-function toggleButtonState(inputList, button) {
+function toggleButtonState(inputList, button, config) {
   if (hasInvalidInput(inputList)) {
     button.setAttribute('disabled', true);
-    button.classList.add('popup__submit_disabled');
+    button.classList.add(config.submitBtnDisabled);
   } else {
     button.removeAttribute('disabled');
-    button.classList.remove('popup__submit_disabled');
+    button.classList.remove(config.submitBtnDisabled);
   }
 };
 
-enableValidation();
+enableValidation(validateSelectors);

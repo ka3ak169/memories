@@ -26,6 +26,7 @@ const selectors = {
   feedbackPopup: '.feedback-popup',
   feedbackPopupForm: '.feedback-popup__form',
   popupSbmBtn: '.popup__submit',
+  submitBtnDisabled: 'popup__submit_disabled',
 };
 
 const menu = document.querySelector(selectors.menu);
@@ -59,14 +60,11 @@ function closeMenu() {
 };
 
 function openPopup(popup) {
-  popup.classList.add('popup_open');  
+  popup.classList.add('popup_open');
 };
 
 function closePopup(popup) {
   popup.classList.remove('popup_open');
-  const popupSbmBtn = popup.querySelector(selectors.popupSbmBtn);
-  popupSbmBtn.classList.add('popup__submit_disabled');
-  popupSbmBtn.setAttribute('disabled', true);
 };
 
 function closeWorkByOverlay(popup) {
@@ -175,13 +173,14 @@ createInitialPortCard();
 
 function popupFormSbm(evt) {
   evt.preventDefault();
-
+  const button = workForm.querySelector(selectors.popupSbmBtn);
   const data = {
     name: workInputName.value,
     link: workInputImage.value,
   };
   renderPortfolioCard(data, portfolioContainer);
   workForm.reset();
+  buttonReset(button);
   closePopup(workPopup);
 };
 
@@ -194,9 +193,16 @@ function starChange(evt) {
 
 function popupFeedbackSbm(evt) {
   evt.preventDefault();
+  const button = feedbackPopupForm.querySelector(selectors.popupSbmBtn);
   feedbackPopupForm.reset();
   closePopup(feedbackPopup);
+  buttonReset(button);
   alert('форму отправили!');
+};
+
+function buttonReset (button) {
+  button.setAttribute('disabled', true);
+  button.classList.add(selectors.submitBtnDisabled);
 }
 
 page.addEventListener('click', starChange);
